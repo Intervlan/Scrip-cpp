@@ -21,7 +21,7 @@ int main()
 	connect(sd, (struct sockaddr *)&adresse, sizeof(struct sockaddr));
 
 	// Envoi d'une requête au serveur
-	string requete = "GET /web/index.php/feed/ HTTP/1.1\r\nHost: sandiris.free.fr\r\n\r\n";
+	string requete = "GET /web/index.php/feed/ HTTP/1.1\r\nHost: \r\n\r\n";
 	send(sd, requete.c_str(), requete.size(), 0);
 	// Lecture de la réponse du serveur pour affichage
 	char bufferReception[5024];
